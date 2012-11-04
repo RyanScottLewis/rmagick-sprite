@@ -3,10 +3,11 @@ require 'rake/version_task'
 spec = Gem::Specification.new do |s|
   s.name = ''
   s.author = 'Ryan Scott Lewis'
-  s.homepage = 'http://github.com/c00lryguy/rspec-web'
-  s.description = 'A web front-end for RSpec tests.'
-  s.summary = 'Run and view Rspec tests from the browser.'
   s.email = 'ryan@rynet.us'
+  
+  s.homepage = "http://github.com/c00lryguy/#{s.name}"
+  s.description = 'Encapsulates a "Sprite" in RMagick.'
+  s.summary = 'Slice up spritesheets into Objects and export as images/animations or use with your favorite gaming library.'
   
   s.require_path = 'lib'
   s.files = `git ls-files`.lines.collect { |line| line.strip }
