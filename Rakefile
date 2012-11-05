@@ -1,4 +1,5 @@
 require 'rake/version_task'
+require 'rubygems/package_task'
 
 spec = Gem::Specification.new do |s|
   s.name = 'rmagick-sprite'
@@ -18,7 +19,13 @@ spec = Gem::Specification.new do |s|
   s.add_dependency('dsl', '~> 0.2.2')
 end
 
-Rake::VersionTask.new do |task|
-  task.with_git_tag = true
-  task.with_gemspec = spec
+Rake::VersionTask.new do |t|
+  t.with_git_tag = true
+  t.with_gemspec = spec
+end
+
+
+Gem::PackageTask.new(spec) do |t|
+  t.need_zip = true
+  t.need_tar = true
 end
