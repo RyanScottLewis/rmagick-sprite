@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rmagick-sprite (0.0.2)
+    rmagick-sprite (0.0.3)
       dsl (~> 0.2.2)
       rmagick (~> 2.13.1)
       version (~> 1.0)

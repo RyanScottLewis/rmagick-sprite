@@ -30,7 +30,7 @@ class Sprite
     end
     
     def reload
-      @image = @sprite.image.crop(@x, @y, @width, @height)
+      @image = @sprite.image.excerpt(@x, @y, @width, @height)
     end
   end
   

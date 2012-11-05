@@ -52,6 +52,18 @@ class Sprite
       increase_index
       current_image
     end
+    
+    def write(filename, &blk)
+     image_list = Magick::ImageList.new
+     @frames.each do |frame|
+       image = frame.image
+       image_list << image
+     end
+     
+     blk.call(image_list) if block_given?
+     
+     image_list.write(filename)
+    end
   end
   
 end

@@ -54,9 +54,13 @@ p sprite.next_image # => Third Image
 p sprite.next_image # => Second Image
 p sprite.next_image # => First Image
 
+# Save each action's frame as a separate image
 sprite.actions.each do |action_name, action|
   action.frames.each_with_index do |frame, index|
     frame.image.write "foo/bar/#{action_name}_#{index}.png"
   end
 end
+
+# Saving an action as a gif (note: looks wonky with transparent backgrounds)
+sprite.actions[:running].write 'foo/bar/running.gif'
 ```
