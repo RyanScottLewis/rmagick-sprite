@@ -1,7 +1,7 @@
 require 'pathname'
 require 'bundler/setup'
 require 'dsl'
-require 'rmagick'
+require 'rmagick' rescue require 'RMagick' # FIXME: WTF is this shit?
 
 Dir[ Pathname(__FILE__).join('..', 'rmagick-sprite', '**', '*.rb').expand_path ].each { |filename| require(filename) }
 
