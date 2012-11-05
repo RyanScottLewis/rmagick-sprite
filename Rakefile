@@ -9,6 +9,7 @@ spec = Gem::Specification.new do |s|
   s.homepage = "http://github.com/c00lryguy/#{s.name}"
   s.description = 'Encapsulates a "Sprite" in RMagick.'
   s.summary = 'Slice up spritesheets into Objects and export as images/animations or use with your favorite gaming library.'
+  s.version = File.read( File.expand_path('./VERSION') )
   
   s.require_path = 'lib'
   s.files = `git ls-files`.lines.collect { |line| line.strip }
