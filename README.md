@@ -1,19 +1,23 @@
 # RMagick-Sprite
 
 ## Example
+
 In this example, I have one character printed on one spritesheet with only one line of 
 evenly spaced/sized sprites.
+
+Here it is:
+
+[Example Spritesheet](http://cl.ly/image/2k320Z2X231T)
 
 ```ruby
 sprite = Sprite.new do
   filename 'foo/bar/character_spritesheet.png'
   
   # The default action that the Sprite will use
-  # Default is :default
   default_action :standing
   
   # These options will be reverse-merged into each frame
-  default_frame_options width: 16, height: 25, y: 24
+  default_frame_options width: 16, height: 25, y: 0
   
   standing do
     frame x: 16 * 1 # Frame 1
@@ -26,6 +30,7 @@ sprite = Sprite.new do
     frame x: 16 * 0 # Frame 1
     frame x: 16 * 1 # Frame 2
     frame x: 16 * 2 # Frame 3
+    frame x: 16 * 1 # Frame 4
   end
   
   running do
@@ -36,11 +41,13 @@ sprite = Sprite.new do
   end
 end
 
+# Standing only has one frame so next_image will loop over the same frame
 p sprite.next_image # => Second Image (Magick::Image) same as: sprite.next_frame.image
 p sprite.next_image # => Second Image
 
 sprite.action = :walking
 
+# Here, we loop through the walking animation.. pump these images right into Gosu or your favorite gaming library
 p sprite.next_image # => First Image
 p sprite.next_image # => Second Image
 p sprite.next_image # => Third Image
