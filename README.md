@@ -5,9 +5,7 @@
 In this example, I have one character printed on one spritesheet with only one line of 
 evenly spaced/sized sprites.
 
-Here it is:
-
-[Example Spritesheet](http://cl.ly/image/2k320Z2X231T)
+Here it is: ![Example Spritesheet](http://f.cl.ly/items/1h1T292v2F3N2f1D3c1b/0.png)
 
 ```ruby
 sprite = Sprite.new do
