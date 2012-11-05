@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    rmagick-sprite (0.0.2)
+      dsl (~> 0.2.2)
+      rmagick (~> 2.13.1)
+      version (~> 1.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    dsl (0.2.2)
+      version (~> 1.0.0)
+    rmagick (2.13.1)
+    version (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rmagick-sprite!

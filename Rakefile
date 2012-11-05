@@ -1,7 +1,7 @@
 require 'rake/version_task'
 
 spec = Gem::Specification.new do |s|
-  s.name = ''
+  s.name = 'rmagick-sprite'
   s.author = 'Ryan Scott Lewis'
   s.email = 'ryan@rynet.us'
   
@@ -15,6 +15,7 @@ spec = Gem::Specification.new do |s|
   
   s.add_dependency('rmagick', '~> 2.13.1')
   s.add_dependency('version', '~> 1.0')
+  s.add_dependency('dsl', '~> 0.2.2')
 end
 
 Rake::VersionTask.new do |task|
