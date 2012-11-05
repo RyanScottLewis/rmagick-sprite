@@ -3,7 +3,7 @@ require 'bundler/setup'
 require 'dsl'
 require 'rmagick'
 
-Dir[ Pathname(__FILE__).join('..', 'sprite', '**', '*.rb').expand_path ].each { |filename| require(filename) }
+Dir[ Pathname(__FILE__).join('..', 'rmagick-sprite', '**', '*.rb').expand_path ].each { |filename| require(filename) }
 
 class Sprite
   class DSL < ::DSL
