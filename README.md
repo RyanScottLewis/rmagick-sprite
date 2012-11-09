@@ -14,21 +14,14 @@ even save each action as an animated GIF.
 
 ## Install
 
-### Bundler
+### Bundler: `gem 'rmagick-sprite'`
 
-```ruby
-gem 'rmagick-sprite'
-```
-
-### RubyGems
-
-```sh
-gem install rmagick-sprite
-```
+### RubyGems: `gem install rmagick-sprite`
 
 ## Example
 
 ### Example Spritesheet
+<hr/ >
 
 In this example, I have one character printed on one spritesheet with only one line of 
 evenly spaced/sized sprites.
@@ -36,6 +29,7 @@ evenly spaced/sized sprites.
 Here it is: ![Example Spritesheet](http://f.cl.ly/items/1h1T292v2F3N2f1D3c1b/0.png)
 
 ### Declaration
+<hr/ >
 
 ```ruby
 require 'rmagick-sprite'
@@ -73,6 +67,7 @@ end
 ```
 
 ### Enumeration
+<hr/ >
 
 ```ruby
 # The :standing action only has one frame, so next_image will loop over the same frame on each call
@@ -90,6 +85,7 @@ p sprite.next_image # => Image 3 - Frame 1
 ```
 
 ### Saving Frames and Actions
+<hr/ >
 
 #### Save each action's frame as a separate image
 
