@@ -65,13 +65,13 @@ class Sprite
   end
   
   def action
-    @action ||= @actions[@default_action]
+    @action ||= @actions[@default_action || :default]
   end
   
   def add_action(name, options={}, &blk)
     raise 'options must be a Hash' unless options.respond_to?(:to_hash) || options.respond_to?(:to_h)
     options = options.to_hash rescue options.to_h
-    options = { sprite: self }.merge(@default_action_options).merge(options)
+    options = { sprite: self, name: name }.merge(@default_action_options).merge(options)
       
     @actions[name] = Action.new(options, &blk)
   end

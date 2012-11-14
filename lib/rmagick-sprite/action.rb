@@ -7,17 +7,18 @@ class Sprite
       end
     end
     
-    attr_reader :sprite, :frames
+    attr_reader :sprite, :frames, :name
     attr_accessor :current_index
     
     def initialize(options, &blk)
       raise 'options must be a Hash' unless options.respond_to?(:to_hash) || options.respond_to?(:to_h)
       options = options.to_hash rescue options.to_h
       
+      raise 'options[:name] must be given' if options[:name].nil?
       raise 'options[:sprite] must be given' if options[:sprite].nil?
       raise 'options[:sprite] must be a Sprite' unless options[:sprite].instance_of?(Sprite)
       
-      @sprite = options[:sprite]
+      @sprite, @name = options.values_at(:sprite, :name)
       @current_index, @frames = 0, []
       
       DSL.call(self, &blk)
