@@ -16,7 +16,7 @@ class Sprite
       
       raise 'options[:name] must be given' if options[:name].nil?
       raise 'options[:sprite] must be given' if options[:sprite].nil?
-      raise 'options[:sprite] must be a Sprite' unless options[:sprite].instance_of?(Sprite)
+      raise 'options[:sprite] must be a Sprite' unless options[:sprite].is_a?(Sprite)
       
       @sprite, @name = options.values_at(:sprite, :name)
       @current_index, @frames = 0, []

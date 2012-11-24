@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rmagick-sprite (0.0.3)
+    rmagick-sprite (0.0.7)
       dsl (~> 0.2.2)
       rmagick (~> 2.13.1)
       version (~> 1.0)
@@ -9,7 +9,7 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
-    dsl (0.2.2)
+    dsl (0.2.3)
       version (~> 1.0.0)
     rmagick (2.13.1)
     version (1.0.0)

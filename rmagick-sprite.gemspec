@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = "rmagick-sprite"
-  s.version = "0.0.7"
+  s.version = "0.0.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Scott Lewis"]
-  s.date = "2012-11-14"
+  s.date = "2012-11-24"
   s.description = "Encapsulates a \"Sprite\" in RMagick."
   s.email = "ryan@rynet.us"
   s.files = [".gitignore", ".rvmrc", "Gemfile", "Gemfile.lock", "README.md", "Rakefile", "VERSION", "lib/rmagick-sprite.rb", "lib/rmagick-sprite/action.rb", "lib/rmagick-sprite/frame.rb", "rmagick-sprite.gemspec"]
